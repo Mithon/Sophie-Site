@@ -10,7 +10,7 @@ $fonts: 'Open Sans', sans-serif;
 //Placeholder things
 %title {
     font-family: $fonts;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 2.3em;
 }
 
@@ -22,6 +22,7 @@ html {
 
 body {
     font-family: $fonts;
+    font-weight: 300;
     margin: 0;
     font-size: 62.5%; /* 1em = 10px */
     background-color: #e6e6e6;
@@ -34,25 +35,47 @@ header {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.70);
     height: 40px;
+    padding: 0;
+    margin: 0;
 }
 
-header ul {
+nav {
     padding-right: 10%;
+    height: 100%;
 }
 
-header li   {
+nav a {
+    height: 65%;
     text-decoration: none;
     float: right;
     padding: 10px 3% 5px 3%;
     font-size: 2em;
     &:hover {
+        background-color: #d8d8d8;
    }
 }
 
 header h2 {
-    @extend title;
-    float:left; 
+    @extend %title;
+    float:left;
+    padding-left: 10%;
+    padding-top: 9px;
 }
 
+//Cards Stuff
 
+.card {
+    height: 800px;
+    width: 100%;
+}
+
+.card:nth-child(odd) {
+    background-color: #18ccb7;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
     
